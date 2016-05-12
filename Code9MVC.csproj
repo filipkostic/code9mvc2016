@@ -143,6 +143,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Flags\brazil.GIF" />
+    <Content Include="Content\Images\Flags\japan.GIF" />
+    <Content Include="Content\Images\Flags\serbia.GIF" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
