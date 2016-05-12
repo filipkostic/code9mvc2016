@@ -48,16 +48,22 @@ namespace Code9MVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "ID,Name,PostalCode")] City city)
+        public async Task<ActionResult> Create([Bind(Include = "ID,Name,PostalCode")] City city, int CountryID)
         {
             if (ModelState.IsValid)
             {
+                city.CountryID = CountryID;
                 db.Cities.Add(city);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
             return View(city);
+        }
+
+        public PartialViewResult CountriesSelect()
+        {
+            return PartialView(db.Countries.ToList());
         }
 
         // GET: Cities/Edit/5

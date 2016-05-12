@@ -11,8 +11,11 @@ namespace Code9MVC.Models
         public string Name { get; set; }
 
         public string PostalCode { get; set; }
-        
+
         [Required]
+        public int CountryID { get; set; }
+
+        [ForeignKey("CountryID")]
         public virtual Country Country { get; set; }
     }
 }
