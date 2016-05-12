@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Code9MVC.Models
 {
@@ -11,6 +12,7 @@ namespace Code9MVC.Models
 
         public string PostalCode { get; set; }
         
+        [Required]
         public virtual Country Country { get; set; }
     }
 }
